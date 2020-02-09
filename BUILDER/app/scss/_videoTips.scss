@@ -1,0 +1,172 @@
+
+.video-tips {
+  display: flex;
+  padding: 70px 0;
+  @include respond(tablet) {
+    padding: 40px 0;
+    font-size: 16px;
+  }
+  @include respond(phone) {
+    display: block;
+  }
+  @include respond(phoneS) {
+    padding: 30px 0;
+  }
+  &__text {
+    padding-right: 70px;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 400px;
+    @include respond(laptop) {
+      padding-right:0;
+    }
+    @include respond(phone) {
+      width: 100%;
+      min-width: auto;
+    }
+
+  }
+  &__box{
+    padding: 31px;
+    background-color: #fff;
+    @include respond(phone) {
+      margin-bottom: 30px;
+    }
+    @include respond(phoneS) {
+      padding: 17px 15px;
+      margin: 0 -14px 30px;
+
+    }
+    &--blue {
+      background-color: #f2f8fc;
+    }
+
+  }
+  &__headline{
+    font-weight: $font-weight-bold;
+    margin-bottom: 30px;
+    line-height: 25px;
+    @include respond(phone) {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+
+  &__desktop {
+    display: block;
+    @include respond(tablet) {
+      //display: none;
+    }
+  }
+  &__info{
+    font-weight: $font-weight-regular;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+  }
+  &__paragraph {
+    line-height: 22px;
+    margin-bottom: 24px;
+    font-weight: $font-weight-regular;
+  }
+  &__phone{
+    box-sizing: border-box;
+    max-width:541px;
+    margin-left: 20px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    @include respond(phone){
+      margin: auto;
+    }
+    @include respond(phoneS){
+      padding: 30px 20px;
+    }
+
+
+  }
+  &__coma{
+    margin-top: 32px;
+    line-height: 28px;
+    font-weight: $font-weight-regular;
+    position: relative;
+    &:before{
+      position: absolute;
+      top: -20px;
+      width: 115px;
+      height: 78px;
+      content: '';
+      background-size: cover;
+      background-position: center;
+      background-image: url(../images/svg/coma.svg);
+
+    }
+  }
+  &__video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+    &--audio{
+      padding-left: 20px;
+      width: auto;
+      flex-grow: 1;
+      @include respond(phone) {
+        padding-left: 0;
+
+      }
+
+    }
+  }
+  &__player{
+    width: 309px;
+    margin:0 auto;
+    flex-grow: 1;
+    @include respond(laptop) {
+      height: 530px;
+    }
+    @include respond(phoneS) {
+      width: 300px;
+      height: 522px;
+
+    }
+  }
+  &__speech{
+    width: 320px;
+    font-size: 24px;
+    font-weight: $font-weight-light;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 30px;
+    &--audio{
+      width: 100%;
+      max-width: 465px;
+    }
+
+  }
+  &__bold {
+    font-weight: $font-weight-bold;
+  }
+  &__list {
+    display: flex;
+    line-height: 22px;
+    margin-bottom: 15px;
+    align-items: center;
+    @include respond(tablet) {
+      font-size: 16px;
+    }
+    @include respond(phone) {
+      font-size: inherit;
+    }
+
+
+  }
+
+}

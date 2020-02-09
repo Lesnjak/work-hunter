@@ -1,0 +1,117 @@
+.audio-box{
+  padding: 40px;
+  width: 100%;
+  max-width: 465px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.22);
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  @include respond(tablet){
+    padding: 40px 0 40px 15px;
+  }
+  @include respond(phone){
+    padding: 40px;
+  }
+  @include respond(phoneS){
+    padding: 40px 0 40px 15px;
+  }
+  &__item{
+    margin-bottom: 50px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+  }
+  &__name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+  }
+  &__image{
+    margin-right: 15px;
+  }
+}
+
+
+.audio-group{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: $primary;
+  &__item{
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    @include respond(tablet){
+      margin-right: 10px;
+    }
+    &:hover{
+      color: $primary-hover;
+    }
+
+  }
+  &__play{
+    width: 30px;
+    flex-shrink: 0;
+  }
+  &__end-time{
+    width: 50px;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+  &__start-time{
+    width: 57px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    @include respond(tablet){
+      display: none;
+    }
+
+  }
+  &__audio{
+    display: none;
+  }
+  &__pause{
+    display: none;
+    width:30px;
+    flex-shrink: 0;
+  }
+  &__redo{
+    display: none;
+    width: 30px;
+    flex-shrink: 0;
+  }
+  &__group{
+
+  }
+  &__progress-bar{
+    position: relative;
+    height: 7px;
+    border-radius: 4px;
+    background-color:$gray-d8 ;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  &__progress{
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: 100%;
+    background-color: $primary;
+    width: 0;
+
+  }
+  &__circle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: $primary;
+    left: -3.5%;
+
+  }
+}

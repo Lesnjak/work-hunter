@@ -1,0 +1,165 @@
+
+.page-title {
+  font-weight: $font-weight-bold;
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  @include respond(phone) {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  @include respond(phoneS) {
+    line-height: 30px;
+    font-size: 22px;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &__arrow {
+    img {
+      position: absolute;
+      top: 100%;
+      margin-top: -30px;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+  }
+
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    height: 55px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    font-weight: $font-weight-bold;
+    padding: 0 18px;
+    font-size: inherit;
+    color: $white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+  &__arrow {
+    margin-left: 23px;
+  }
+}
+
+.questions-wrapper {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+  @include respond(tablet) {
+    display: block;
+    padding: 40px 0;
+  }
+  @include respond(phoneS) {
+    padding: 30px 0;
+  }
+}
+
+.questions {
+  width: calc(50% - 9px);
+  @include respond(tablet) {
+    width: 100%;
+  }
+
+}
+
+.question-item {
+  line-height: 22px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  padding: 21px 27px 0 70px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 18px;
+  @include respond(phone) {
+    padding: 14px 27px 0 50px;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+
+  }
+
+  &__text {
+    padding-bottom: 21px;
+    display: none;
+    @include respond(phone) {
+      padding-bottom: 14px;
+    }
+  }
+
+  &__icon {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    flex-shrink: 0;
+    left: 25px;
+    @include respond(phone) {
+      left: 18px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 21px;
+    @include respond(phone) {
+      padding-bottom: 14px;
+    }
+  }
+
+  &__info {
+    float: right;
+  }
+
+  &__horizontal, &__vertical {
+    position: absolute;
+    background-color: $primary;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s
+  }
+
+  &__vertical {
+    height: 100%;
+    width: 2px;
+
+    &--open {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+
+}
+
+
+
+

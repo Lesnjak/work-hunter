@@ -1,0 +1,214 @@
+
+
+.call-back{
+  margin: 70px 0;
+  position: relative;
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(24, 58, 100, 0.05) 100%);
+  @include respond(phone){
+    margin: 30px 0;
+  }
+  &__operator{
+    position: relative;
+    img{
+      width: 100%;
+    }
+
+   }
+  &__speech{
+    width: 439px;
+    position: absolute;
+    bottom:250px;
+    font-size: 28px;
+    font-weight: $font-weight-semi-bold;
+    line-height: 35px;
+    text-align: center;
+    left: 60px;
+    &:before{
+      position: absolute;
+      content: "";
+      background-image: url(../images/svg/coma.svg);
+      background-position: center;
+      background-size: cover;
+      top: -50px  ;
+      left: 0;
+      width: 121px;
+      height: 81px;
+    }
+    @include respond(tablet){
+      width: 400px;
+      bottom:auto;
+      top: 100px;
+      font-size: 25px;
+    }
+    @include respond(phone){
+      text-align: left;
+      line-height: 30px;
+      width:40%;
+      bottom:auto;
+      left: 20px;
+      top: 30px;
+      font-size: 22px;
+      &:before{
+        top: -5px;
+        width: 74px;
+        height: 48px;
+      }
+    }
+    @include respond(phoneS){
+      text-align: left;
+      line-height: 25px;
+      bottom:auto;
+      left: 10px;
+      top: 10px;
+      font-size: 18px;
+    }
+
+    
+  }
+  &__name{
+    position: absolute;
+    right:100px;
+    bottom: 15px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.62);
+    @include respond(tablet){
+      right: 30px;
+    }
+    @include respond(phone){
+      bottom: 60px;
+      right: 50px;
+    }
+    @include respond(phoneS){
+      bottom: 7px;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: right;
+      right: 7px;
+    }
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__prev{
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    @include respond(tablet){
+      left: 30px;
+    }
+    @include respond(phone){
+      top:auto;
+      bottom: 245px;
+      transform: none;
+    }
+    @include respond(phoneS){
+      width: 12px;
+    }
+
+  }
+  &__next{
+    z-index: 10;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include respond(tablet){
+      right: 30px;
+    }
+    @include respond(phone){
+      top:auto;
+      bottom: 245px;
+      transform: none;
+    }
+    @include respond(phoneS){
+      width: 12px;
+    }
+
+  }
+  &__for{
+
+
+  }
+
+    &__nav{
+      width: 439px;
+      position: absolute;
+      bottom: -74px;
+      left: 60px;
+      @include respond(tablet){
+        width: 400px;
+        margin-top: 100px;
+        bottom:auto;
+
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @include respond(phone){
+        position: static;
+        width: 100%;
+        transform:none;
+        padding: 0 15px;
+        margin-top: -40px;
+      }
+      @include respond(phoneS){
+        position: static;
+        width: 100%;
+        transform:none;
+        padding:0;
+        margin-top: 0;
+      }
+
+    }
+  &__form{
+    padding: 32px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.22);
+    border-radius: 3px;
+    background-color: #183a64;
+  }
+  &__header{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__button{
+    height: 55px;
+    color: $white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    transition: 0.3s;
+
+
+
+   &--red{
+     background-color: $primary;
+     margin-bottom: 10px;
+     &:hover{
+       background-color: $primary-hover;
+     }
+     i{
+       margin-right: 25px;
+       margin-left: 4px;
+     }
+
+   }
+    &--green{
+      background-color: $green-button;
+      &:hover{
+        background-color: #00d39b;
+      }
+      i{
+        font-size: 33px;
+        margin-right: 20px;
+      }
+
+    }
+  }
+
+}

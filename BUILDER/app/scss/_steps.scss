@@ -1,0 +1,140 @@
+.page-title {
+  font-weight: $font-weight-light;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+  @include respond(phone) {
+    line-height: 40px;
+    font-size: 30px;
+  }
+  @include respond(phoneS) {
+    line-height: 25px;
+    font-size: 18px;
+  }
+  &--big{
+    @include respond(phoneS) {
+      font-size: 24px;
+    }
+  }
+  &__icon{
+    margin-right: 30px;
+    @include respond(phone) {
+      width: 50px;
+    }
+    @include respond(phoneS) {
+      width: 40px;
+    }
+  }
+  &__arrow {
+    img {
+      position: absolute;
+      top: 100%;
+      margin-top: -30px;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+
+  }
+  &__arrow-down {
+    font-weight: $font-weight-medium;
+    font-size: 24px;
+    text-align: center;
+    max-width: 927px;
+    margin: 20px auto 0;
+    position: relative;
+    line-height: 29px;
+    @include respond(tablet) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include respond(phoneS) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &:after {
+      position: absolute;
+      width: 60px;
+      height: 135px;
+      content: "";
+      background-image: url(../images/svg/arrow-down.svg);
+      background-size: cover;
+      right: 20px;
+      top: 100%;
+      z-index: 10;
+      @include respond(tablet) {
+        width: 44px;
+        height: 100px;
+      }
+    }
+  }
+
+}
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__link {
+    height: 55px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    font-weight: $font-weight-bold;
+    padding: 0 18px;
+    font-size: inherit;
+    color: $white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+    &--blue{
+      background-color: $blue-color;
+      &:hover {
+        background-color: $blue-color-hover;
+      }
+    }
+  }
+  &__top-text{
+    font-size: 26px;
+    font-weight: $font-weight-light;
+    margin-bottom: 30px;
+    text-align: center;
+    @include respond(tablet){
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    @include respond(phoneS){
+      font-size: 16px;
+    }
+  }
+  &__bottom-text{
+    font-size: 16px;
+    font-weight: $font-weight-light;
+    margin-top: 20px;
+    text-align: center;
+    @include respond(phoneS){
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+
+  &__arrow {
+    margin-left: 23px;
+  }
+}
+
+
